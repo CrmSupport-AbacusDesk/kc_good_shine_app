@@ -96,8 +96,7 @@ export class MyApp {
             if (this.loginType == 'CMS') {
                 storage.get('token').then((val) => {
                     if (val == '' || val == null || val == undefined) {
-                        // this.rootPage = SelectRegistrationTypePage;
-                        this.rootPage = LoginPage;
+                        this.rootPage = SelectRegistrationTypePage;
 
                     } else if (val) {
                         this.tokenInfo = this.getDecodedAccessToken(val);
@@ -115,94 +114,93 @@ export class MyApp {
             else {
                 setTimeout(() => {
                     if (this.constant.UserLoggedInData.userLoggedInChk == false) {
-                        // this.nav.setRoot(SelectRegistrationTypePage);
-                        this.nav.setRoot(LoginPage);
+                        this.nav.setRoot(SelectRegistrationTypePage);
 
                     }
                     else {
-                        // if (this.constant.UserLoggedInData.loggedInUserType == 'Employee') {
-                        //     storage.get('token_value').then((val) => {
-                        //         if (val == '' || val == null || val == undefined) {
-                        //             this.nav.setRoot(SelectRegistrationTypePage);
-                        //         }
-                        //         else {
-                        //             this.initPushNotification();
-                        //             this.nav.setRoot(DashboardPage);
-                        //         }
-                        //     });
-                        //     this.currentTime = moment().format("HH:mm:ss");
+                        if (this.constant.UserLoggedInData.loggedInUserType == 'Employee') {
+                            storage.get('token_value').then((val) => {
+                                if (val == '' || val == null || val == undefined) {
+                                    this.nav.setRoot(SelectRegistrationTypePage);
+                                }
+                                else {
+                                    this.initPushNotification();
+                                    this.nav.setRoot(DashboardPage);
+                                }
+                            });
+                            this.currentTime = moment().format("HH:mm:ss");
 
 
-                        //     this.storage.get('token').then((token) => {
-                        //         if (typeof (token) !== 'undefined' && token) {
-                        //             this.user_logged_in = true;
-                        //         }
-                        //         else {
-                        //             this.user_logged_in = false;
-                        //             this.rootPage = SelectRegistrationTypePage;
-                        //         }
-                        //     });
-                        //     this.storage.get('name').then((name) => {
-                        //         if (typeof (name) !== 'undefined' && name) {
-                        //             this.userName = name;
-                        //         }
-                        //     });
-                        //     this.storage.get('role_id').then((roleId) => {
-                        //         if (typeof (roleId) !== 'undefined' && roleId) {
-                        //             this.userRoleId = roleId;
-                        //         }
-                        //     });
-                        //     this.storage.get('user_type').then((userType) => {
-                        //         if (typeof (userType) !== 'undefined' && userType) {
-                        //             this.userType = userType;
-                        //         }
-                        //     });
-                        //     setTimeout(() => {
-                        //         this.storage.get('role').then((role) => {
-                        //             if (typeof (role) !== 'undefined' && role) {
-                        //                 this.userLoggedRole = role;
-                        //             }
-                        //             if (this.user_logged_in) {
-                        //             }
-                        //         });
-                        //         this.storage.get('displayName').then((displayName) => {
-                        //             if (typeof (displayName) !== 'undefined' && displayName) {
-                        //                 this.userLoggedDisplayName = displayName;
-                        //             }
-                        //         });
-                        //     }, 1000);
-                        //     this.storage.get('token_value').then((token_value) => {
-                        //         if (typeof (token_value) !== 'undefined' && token_value) {
-                        //             this.userToken = token_value;
-                        //         }
-                        //     });
-                        //     this.events.subscribe('current_page', (data) => {
-                        //         this.current_page = data;
-                        //     });
-                        // }
-                        // else if (this.constant.UserLoggedInData.loggedInUserType == 'DrLogin') {
+                            this.storage.get('token').then((token) => {
+                                if (typeof (token) !== 'undefined' && token) {
+                                    this.user_logged_in = true;
+                                }
+                                else {
+                                    this.user_logged_in = false;
+                                    this.rootPage = SelectRegistrationTypePage;
+                                }
+                            });
+                            this.storage.get('name').then((name) => {
+                                if (typeof (name) !== 'undefined' && name) {
+                                    this.userName = name;
+                                }
+                            });
+                            this.storage.get('role_id').then((roleId) => {
+                                if (typeof (roleId) !== 'undefined' && roleId) {
+                                    this.userRoleId = roleId;
+                                }
+                            });
+                            this.storage.get('user_type').then((userType) => {
+                                if (typeof (userType) !== 'undefined' && userType) {
+                                    this.userType = userType;
+                                }
+                            });
+                            setTimeout(() => {
+                                this.storage.get('role').then((role) => {
+                                    if (typeof (role) !== 'undefined' && role) {
+                                        this.userLoggedRole = role;
+                                    }
+                                    if (this.user_logged_in) {
+                                    }
+                                });
+                                this.storage.get('displayName').then((displayName) => {
+                                    if (typeof (displayName) !== 'undefined' && displayName) {
+                                        this.userLoggedDisplayName = displayName;
+                                    }
+                                });
+                            }, 1000);
+                            this.storage.get('token_value').then((token_value) => {
+                                if (typeof (token_value) !== 'undefined' && token_value) {
+                                    this.userToken = token_value;
+                                }
+                            });
+                            this.events.subscribe('current_page', (data) => {
+                                this.current_page = data;
+                            });
+                        }
+                        else if (this.constant.UserLoggedInData.loggedInUserType == 'DrLogin') {
 
-                        //     storage.get('token_value').then((val) => {
-                        //         if (val == '' || val == null || val == undefined) {
-                        //             this.nav.setRoot(SelectRegistrationTypePage);
-                        //         }
-                        //         else {
-                        //             this.initPushNotification();
-                        //             this.nav.setRoot(DealerHomePage);
-                        //             if (this.constant.UserLoggedInData.displayName) {
-                        //                 this.userLoggedDisplayName = this.constant.UserLoggedInData.displayName
-                        //             }
-                        //         }
+                            storage.get('token_value').then((val) => {
+                                if (val == '' || val == null || val == undefined) {
+                                    this.nav.setRoot(SelectRegistrationTypePage);
+                                }
+                                else {
+                                    this.initPushNotification();
+                                    this.nav.setRoot(DealerHomePage);
+                                    if (this.constant.UserLoggedInData.displayName) {
+                                        this.userLoggedDisplayName = this.constant.UserLoggedInData.displayName
+                                    }
+                                }
 
-                        //     });
+                            });
 
-                        // }
+                        }
 
                          if (this.constant.UserLoggedInData.loggedInUserType == 'Other') {
                             storage.get('token_value').then((val) => {
                                 if (val == '' || val == null || val == undefined) {
                                     this.initPushNotification();
-                                    this.nav.setRoot(LoginPage);
+                                    this.nav.setRoot(SelectRegistrationTypePage);
                                 }
                                 else {
                                     this.nav.setRoot(LoyaltyHomePage);

@@ -51,10 +51,11 @@ export class LoyaltyGiftGalleryDetailPage {
         this.service.dismissLoading();
         this.gift_detail = result['gift_master_list'];
         this.influencer_point = result['detail'];
+        this.data.wallet_no = this.influencer_point.paytm_mobile_no.toString();
 
-        if(this.influencer_point.country=='india'){
-          this.data.wallet_no = this.influencer_point.paytm_mobile_no.toString();
-        }
+        // if(this.influencer_point.country=='india'){
+        //   this.data.wallet_no = this.influencer_point.paytm_mobile_no.toString();
+        // }
         this.data.cash_point = this.gift_detail.range_start;
         this.data.cash_value = Number(this.gift_detail.range_start) * Number(this.gift_detail.point_range_value);
 

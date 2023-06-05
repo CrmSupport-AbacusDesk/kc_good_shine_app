@@ -61,7 +61,7 @@ export class RegistrationPage {
   ) {
     
     console.log(this.navParams);
-    this.data.type = '5';
+    
     this.appVersion = navParams.get('app_version');
     this.data['device_unique_id']  = this.device.uuid;
     this.data['app_version']  = this.appVersion;
