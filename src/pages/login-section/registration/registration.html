@@ -141,6 +141,15 @@
                             onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="6"
                             minlength="5"></ion-input>
                     </ion-item>
+
+                    <ion-item [ngClass]="{'error':f.submitted && sales_emp?.invalid}">
+                        <ion-label floating>Select Sales Employee <span>*</span></ion-label>
+                        <ion-select name="sales_emp" [(ngModel)]="data.sales_emp" #sales_emp="ngModel"
+                            (ngModelChange)="getDistrictList(data.sales_emp)" required>
+                            <!-- <ion-option *ngFor="let row of state_list"
+                                value="{{row.sales_emp}}">{{row.sales_emp}}</ion-option> -->
+                        </ion-select>
+                    </ion-item>
                     <!-- <div *ngIf="f.submitted && pincode.invalid" class="eror">
                         <p *ngIf="pincode.errors.required">{{'Field is Required'}}</p>
                     </div> -->
@@ -194,38 +203,38 @@
                             <div *ngIf="pan_no.errors?.pattern" class="eror">
                                 <div>{{'Invalid Pan Card Number'}}</div>
                             </div>
-                            <ion-list-header class="form-heading">
+                            <!-- <ion-list-header class="form-heading">
                                 {{'Bank Information'}}
-                            </ion-list-header>
-                            <ion-item [ngClass]="{'error':f.submitted && account_holder_name?.invalid}">
+                            </ion-list-header> -->
+                            <!-- <ion-item [ngClass]="{'error':f.submitted && account_holder_name?.invalid}">
                                 <ion-label floating>{{'Account Holder Name'}}</ion-label>
                                 <ion-input type="text" name="account_holder_name" ng-pattern-restrict
                                     #account_holder_name="ngModel" [(ngModel)]="data.account_holder_name"
                                     [readonly]="data.payout_kyc_status=='Pending' || data.payout_kyc_status=='Approved'"></ion-input>
-                            </ion-item>
-                            <ion-item [ngClass]="{'error':f.submitted && bank_name?.invalid}">
+                            </ion-item> -->
+                            <!-- <ion-item [ngClass]="{'error':f.submitted && bank_name?.invalid}">
                                 <ion-label floating>{{'Bank Name'}}</ion-label>
                                 <ion-input type="text" name="bank_name " ng-pattern-restrict #bank_name="ngModel"
                                     [(ngModel)]="data.bank_name"
                                     [readonly]="data.payout_kyc_status=='Pending' || data.payout_kyc_status=='Approved'"></ion-input>
-                            </ion-item>
-                            <ion-item [ngClass]="{'error':f.submitted && Account_no?.invalid}">
+                            </ion-item> -->
+                            <!-- <ion-item [ngClass]="{'error':f.submitted && Account_no?.invalid}">
                                 <ion-label floating>{{'Account No.'}}</ion-label>
                                 <ion-input type="tel" name="Account_no " #Account_no="ngModel"
                                     [(ngModel)]="data.account_no" minlength="9" maxlength="18"
                                     [readonly]="data.payout_kyc_status=='Pending' || data.payout_kyc_status=='Approved'"></ion-input>
-                            </ion-item>
+                            </ion-item> -->
 
-                            <ion-item [ngClass]="{'error':f.submitted && ifsc_code?.invalid}">
+                            <!-- <ion-item [ngClass]="{'error':f.submitted && ifsc_code?.invalid}">
                                 <ion-label floating>{{'IFSC Code'}}</ion-label>
                                 <ion-input type="text" name="ifsc_code " #ifsc_code="ngModel"
                                     [(ngModel)]="data.ifsc_code" pattern="^[A-Z]{4}[0][A-Z0-9]{6}$"
                                     [readonly]="data.payout_kyc_status=='Pending' || data.payout_kyc_status=='Approved'"></ion-input>
-                            </ion-item>
-                            <div *ngIf="ifsc_code.errors?.pattern" class="eror">
+                            </ion-item> -->
+                            <!-- <div *ngIf="ifsc_code.errors?.pattern" class="eror">
                                 <div>{{'Invalid IFSC Code'}}</div>
-                            </div>
-                            <div class="outer-doc">
+                            </div> -->
+                            <!-- <div class="outer-doc">
                                 <div class="upload-document mt15"
                                     (click)="data.payout_kyc_status=='' || data.payout_kyc_status=='Reject' ? onUploadBankImg() :''">
                                     <p *ngIf="bankImageFlag == false"><i
@@ -233,7 +242,7 @@
                                     <img src="{{data.bank_img_id ? uploadurl+data.bank_img :  data.bank_img}}"
                                         *ngIf="bankImageFlag == true">
                                 </div>
-                            </div>
+                            </div> -->
                         </ng-container>
                     </ng-container>
 

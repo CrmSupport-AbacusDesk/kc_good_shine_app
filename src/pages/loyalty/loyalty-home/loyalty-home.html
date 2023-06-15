@@ -65,49 +65,77 @@
                     {{'Click here for scan'}}
                 </div>
             </ng-container> -->
+            <div class="outline-btn" (click)="goToProfile();">
+                <!-- <i class="material-icons">person</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/profile.png">
+                </div>
+               <p> {{'Profile'}}</p> 
+            </div>
 
 
             <div class="outline-btn" (click)="Scaning()" *ngIf="pointRight.scanning_rights == 'Yes'">
-                <div class="icons"><i class="material-icons">qr_code_scanner</i></div>
-                {{'Scan'}}
+                <!-- <div class="icons"><i class="material-icons">qr_code_scanner</i></div> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/scane.svg">
+                </div>
+               <p>{{'Scan'}}</p>
             </div>
                
             <!-- <div class="outline-btn" (click)="goToCoupon()" *ngIf="pointRight.scanning_rights == 'Yes'">
                 <div class="icons"><i class="material-icons">qr_code</i></div>
                 {{'Enter Code'}}
             </div> -->
+            <div class="outline-btn" (click)="goOnProductPage()">
+                <!-- <i class="material-icons ">category</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/gift-new.svg">
+                </div>
+              <p>{{'Products'}}</p> 
+            </div>
 
             <div class="outline-btn" (click)="goOnPointeListPage()"
                 *ngIf="pointRight.scanning_rights == 'Yes' || pointRight.point_transfer_rights == 'Yes' ">
-                <div class="icons"><i class="material-icons">receipt_long</i></div>
-                {{'Point History'}}
+                <!-- <div class="icons"><i class="material-icons">receipt_long</i></div> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/payment.svg">
+                </div>
+                <p>{{'Point History'}}</p>
             </div>
          
 
 
             <div class="outline-btn" (click)="goOnDigitalcatPage();">
-                <i class="material-icons">picture_as_pdf</i>
-                {{'Catalogues'}}
-            </div>
-            <div class="outline-btn" (click)="goOnProductPage()">
-                <i class="material-icons ">category</i>
-               {{'Products'}}
+                <!-- <i class="material-icons">picture_as_pdf</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/pdf.svg">
+                </div>
+               <p>{{'Catalogues'}}</p> 
             </div>
 
             <div class="outline-btn" (click)="influencer_detail.status != 'Approved' ?  goToGift() : goToDetail()"
                 *ngIf="pointRight.scanning_rights == 'Yes' || pointRight.point_transfer_rights == 'Yes' ">
-                <i class="material-icons">card_giftcard</i>
-                {{'Redeem Points'}}
+                <!-- <i class="material-icons">card_giftcard</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/gift.svg">
+                </div>
+               <p>{{'Redeem Points'}}</p> 
             </div>
 
             <div class="outline-btn" (click)="goToTracker();"
                 *ngIf="pointRight.scanning_rights == 'Yes' || pointRight.point_transfer_rights == 'Yes' ">
-                <i class="material-icons">fmd_good</i>
-                {{'Track Request'}}
+                <!-- <i class="material-icons">fmd_good</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/history.svg">
+                </div>
+                <p>{{'Track Request'}}</p>
             </div>
             <div class="outline-btn" (click)="goToSurvey()">
-                <i class="material-icons ">poll</i>
-                {{'Survey'}}
+                <!-- <i class="material-icons ">poll</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/wallet.svg">
+                </div>
+               <p>{{'Survey'}}</p> 
             </div>
             <!-- <div class="outline-btn" (click)="goToBonusPoint();" *ngIf="pointRight.scanning_rights == 'Yes' || pointRight.point_transfer_rights == 'Yes' ">
             <i class="material-icons">fmd_good</i>
@@ -115,29 +143,44 @@
         </div> -->
 
             <div class="outline-btn" (click)="goToVideo();">
-                <i class="material-icons">play_circle</i>
-                {{'Videos'}}
+                <!-- <i class="material-icons">play_circle</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/video-call.svg">
+                </div>
+              <p>{{'Videos'}}</p>  
             </div>
 
             <div class="outline-btn" (click)="goToAbout();">
-                <i class="material-icons">info</i>
-                {{'About Us'}}
+                <!-- <i class="material-icons">info</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/company.svg">
+                </div>
+               <p>{{'About Us'}}</p> 
             </div>
 
             <div class="outline-btn" (click)="goToContact();">
-                <i class="material-icons">contact_phone</i>
-                {{'Contact Us'}}
+                <!-- <i class="material-icons">contact_phone</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/contact.svg">
+                </div>
+              <p>{{'Contact Us'}}</p>  
             </div>
 
-            <div class="outline-btn" (click)="goToProfile();">
-                <i class="material-icons">person</i>
-                {{'Profile'}}
-            </div>
+            <!-- <div class="outline-btn" (click)="goToProfile();">
+                 <i class="material-icons">person</i>
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/profile.png">
+                </div>
+               <p> {{'Profile'}}</p> 
+            </div> -->
 
 
             <div class="outline-btn" (click)="goToSupport();">
-                <i class="material-icons">help</i>
-                {{'Support'}}
+                <!-- <i class="material-icons">help</i> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/faq.svg">
+                </div>
+                <p>{{'Support'}}</p>
             </div>
         </div>
 

@@ -174,26 +174,27 @@ export class LoyaltyRedeemRequestPage {
       return;
     }
 
-    if (this.karigar_detail.country == 'india') {
-      if ((this.gift_type == 'Cash') && (this.paymentMode=='Bank') && ((this.karigar_detail.account_holder_name == '' || this.karigar_detail.bank_name == '') || (this.karigar_detail.account_no == '' || this.karigar_detail.ifsc_code == ''))) {
-        this.service.errorToast('Bank details not updated yet. Update bank details and retry');
-        return;
-      }
-    }
+    // if (this.karigar_detail.country == 'india') {
+    //   if ((this.gift_type == 'Cash') && (this.paymentMode=='Bank') && ((this.karigar_detail.account_holder_name == '' || this.karigar_detail.bank_name == '') || (this.karigar_detail.account_no == '' || this.karigar_detail.ifsc_code == ''))) {
+    //     this.service.errorToast('Bank details not updated yet. Update bank details and retry');
+    //     return;
+    //   }
+    // }
 
-    if (this.gift_type == 'Cash') {
-      this.data.point = parseFloat(this.data.cash_point);
-      this.data.account_holder_name = this.karigar_detail.account_holder_name
-      this.data.bank_name = this.karigar_detail.bank_name
-      this.data.account_no = this.karigar_detail.account_no
-      this.data.ifsc_code = this.karigar_detail.ifsc_code
-      // this.data.point_range_value = this.gift_detail.point_range_value;
-    }
+    // if (this.gift_type == 'Cash') {
+    //   this.data.point = parseFloat(this.data.cash_point);
+    //   this.data.account_holder_name = this.karigar_detail.account_holder_name
+    //   this.data.bank_name = this.karigar_detail.bank_name
+    //   this.data.account_no = this.karigar_detail.account_no
+    //   this.data.ifsc_code = this.karigar_detail.ifsc_code
+    //   // this.data.point_range_value = this.gift_detail.point_range_value;
+    // }
     if (!this.data.check) {
       this.service.errorToast('Accept Cancellation Policy');
       return;
     }
     this.data.gift_id = this.gift_id,
+    
       this.saveFlag = true;
     this.service.presentLoading();
 

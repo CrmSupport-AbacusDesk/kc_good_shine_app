@@ -32,6 +32,7 @@ export class LoyaltyGiftGalleryDetailPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public service: MyserviceProvider, public loadingCtrl: LoadingController, private app: App, public storage: Storage, public db: DbserviceProvider, public constant: ConstantProvider, public toastCtrl: ToastController) {
+  //  this.data.payment_mode = 'Bank';
     this.gift_id = this.navParams.get('id');
     this.uploadUrl = constant.upload_url1 + 'gift_gallery/';
     this.service.presentLoading();
@@ -105,15 +106,15 @@ export class LoyaltyGiftGalleryDetailPage {
         return
       }
 
-      if (!this.data.payment_mode && this.influencer_point.country.trim().toLowerCase() == 'india') {
-        this.service.errorToast('Please Select Payment Mode First');
-        return
-      }
+      // if (!this.data.payment_mode && this.influencer_point.country.trim().toLowerCase() == 'india') {
+      //   this.service.errorToast('Please Select Payment Mode First');
+      //   return
+      // }
 
-      if ( parseInt(this.data.wallet_no.length)!=10 && this.data.payment_mode!='Bank' ) {
-        this.service.errorToast('Please Enter 10 Digit Mobile No.');
-        return
-      }
+      // if ( parseInt(this.data.wallet_no.length)!=10 && this.data.payment_mode!='Bank' ) {
+      //   this.service.errorToast('Please Enter 10 Digit Mobile No.');
+      //   return
+      // }
 
       if (parseFloat(this.data.cash_point) > parseFloat(this.influencer_point.wallet_point)) {
         this.service.errorToast('Insufficient point in your wallet');
