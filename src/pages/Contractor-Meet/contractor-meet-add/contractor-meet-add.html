@@ -10,7 +10,7 @@
                 <!-- <ion-item  [ngClass]="{'error':f.submitted && dr_type?.invalid}">
                     <ion-label floating>Select Type <span>*</span></ion-label>
                     <ion-select name="select_type" name="dr_type" #dr_type="ngModel" [(ngModel)]="data.dr_type" (ngModelChange)="get_network_list(data.dr_type)" required>
-                        <ion-option value="1">Channel Partner</ion-option>
+                        <ion-option value="1">Distributor</ion-option>
                         <ion-option value="7">DIRECT DEALER</ion-option>
                         <ion-option value="3">DEALER</ion-option>
                     </ion-select>
@@ -23,7 +23,7 @@
                     </ion-select>
                 </ion-item>
                 <!-- <ion-item   *ngIf="drList.length > 0">
-                    <ion-label floating *ngIf="data.dr_type == '1'">Channel Partner</ion-label>
+                    <ion-label floating *ngIf="data.dr_type == '1'">Distributor</ion-label>
                     <ion-label floating *ngIf="data.dr_type == '3'">Dealer</ion-label>
                     <ion-label floating *ngIf="data.dr_type == '7'">Direct Dealer</ion-label>
                     <ionic-selectable

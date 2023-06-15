@@ -21,7 +21,7 @@
 		<div class="edit m0" [hidden]="hideList">
 			<ion-list>
 				<ion-item class="cs-normal-select ">
-					<ion-label floating>Channel Partner</ion-label>
+					<ion-label floating>Distributor</ion-label>
 					<ionic-selectable item-content [(ngModel)]="data.type_name" [items]="distributor_network_list"
 						itemValueField="id" itemTextField="display_name"
 						(onChange)="other(data.type_name.company_name,data.type_name)" [canSearch]="true"
@@ -103,7 +103,7 @@
 
 					<div *ngIf="!form.id">
 						<ion-item [ngClass]="{'error':f.submitted &&assign_dr_id?.invalid}">
-							<ion-label floating>Select Channel Partner<span>*</span></ion-label>
+							<ion-label floating>Select Distributor<span>*</span></ion-label>
 							<ionic-selectable item-content name="assign_dr_id" #assign_dr_id="ngModel"
 								[(ngModel)]="form.assign_dr_id" [items]="distributor_list" itemValueField="id"
 								itemTextField="display_name" [canSearch]="true" #selectComponent required>

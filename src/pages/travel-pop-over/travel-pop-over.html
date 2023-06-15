@@ -27,8 +27,8 @@
   <button ion-item (click)="close('Team')">Team Enquiry</button>
 </ion-list>
 <ion-list *ngIf="NavType=='Distributor'&& DrType !=7" class="popover_list">
-  <button ion-item (click)="close('My')">My Channel Partner</button>
-  <button ion-item (click)="close('Team')">Team Channel Partner</button>
+  <button ion-item (click)="close('My')">My Distributor</button>
+  <button ion-item (click)="close('Team')">Team Distributor</button>
 </ion-list>
 <ion-list *ngIf="NavType=='Distributor'&& DrType==7" class="popover_list">
   <button ion-item (click)="close('My')">My Dealers</button>

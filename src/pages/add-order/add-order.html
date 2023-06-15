@@ -17,7 +17,7 @@
                 <ion-item  class="cs-normal-select mt16"  >
                     <ion-label>Select type</ion-label>
                     <ion-select  placeholder="Select Type" name="networkType"  [(ngModel)]="data.networkType" (ngModelChange)="get_network_list(data.networkType)" [disabled]="(disableSelectFromCheckin == true)">
-                        <ion-option  *ngIf="drtype=='Primary'" value="1">Channel Partner</ion-option>
+                        <ion-option  *ngIf="drtype=='Primary'" value="1">Distributor</ion-option>
                         <!-- <ion-option *ngIf="drtype=='Primary'" value="7">Direct Dealer</ion-option> -->
                         <ion-option *ngIf="drtype=='Secondary'" value="3">Dealer</ion-option>
                     </ion-select>
@@ -49,7 +49,7 @@
         
         
         <ion-item class="cs-selectable mt16" *ngIf="data.networkType == 3">
-            <ion-label><span>Select Channel Partner</span></ion-label>
+            <ion-label><span>Select Distributor</span></ion-label>
             <ionic-selectable 
             item-content 
             [(ngModel)]="data.delivery_from"

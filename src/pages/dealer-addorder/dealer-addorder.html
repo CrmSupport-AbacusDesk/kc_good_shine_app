@@ -10,7 +10,7 @@
     <div class="edit mt16">
         <ion-list>
             <ion-item class="cs-selectable" *ngIf="user_data.type == 3 && distributorSelected==true">
-                <ion-label><span>Select Channel Partner</span></ion-label>
+                <ion-label><span>Select Distributor</span></ion-label>
                 <ionic-selectable item-content disabled [(ngModel)]="data.distributor_id" [items]="distributor_list" itemValueField="id" itemTextField="company_name" name="company_name" value="id" [canSearch]="true">
                 </ionic-selectable>
             </ion-item>	
