@@ -1,0 +1,135 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "call-number": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "com-sarriaroman-photoviewer": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-androidx-build": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-open-native-settings": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-gpsmockchecker": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-nativegeocoder": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-request-location-accuracy": {
+      "PLAY_SERVICES_LOCATION_VERSION": "16.+",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-telerik-imagepicker": {
+      "ANDROID_SUPPORT_V7_VERSION": "27.+",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-plugin-zip": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova.plugins.diagnostic": {
+      "ANDROID_SUPPORT_VERSION": "28.+",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "phonegap-plugin-push": {
+      "ANDROID_SUPPORT_V13_VERSION": "27.+",
+      "FCM_VERSION": "17.0.+",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "polarcape-cordova-plugin-document-handler": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "uk.co.workingedge.cordova.plugin.sqliteporter": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyAZ-kqYo3DslRI2VIuvP5GIK7OK-U9n3AQ}",
+      "OKHTTP_VERSION": "3.12.0",
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "cordova-support-google-services": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    },
+    "phonegap-plugin-multidex": {
+      "PACKAGE_NAME": "com.abacusdesk.kc_good_shine"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<!--
+  Generated template for the LoyaltyContactPage page.
+  
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Contact Us</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="nev-adjust">
+    <div class="background hp100">
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.1524727699175!2d77.10504637533509!3d28.8938168721677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dad5ece8caa3f%3A0xba1d39d7e2853045!2sKrishna%20Chemicals!5e0!3m2!1sen!2sin!4v1685598956163!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <div class="cs-nevigation">
+      <div class="map-main" >
+        <div class="map-content">
+          <div class="location brd-btm"  *ngIf="contact.address">
+            <i class="material-icons">location_on</i>
+            <p>{{contact.address}}</p>
+          </div>
+          <div class="location" *ngIf="contact.contact_number">
+            <i class="material-icons">phone</i>
+            <a href="tel:{{contact.contact_number}}">{{contact.contact_number}} </a>
+          </div>
+          <div class="location" *ngIf="contact.contact_number_2">
+            <i class="material-icons">phone</i>
+            <a href="tel:{{contact.contact_number_2}}">{{contact.contact_number_2}} </a>
+          </div>
+          <div class="location" *ngIf="contact.email">
+            <i class="material-icons">email</i>
+            <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+          </div>
+          <div class="location" *ngIf="contact.url">
+            <i class="material-icons">language</i>
+            <a href="{{contact.url}}">{{contact.url}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
