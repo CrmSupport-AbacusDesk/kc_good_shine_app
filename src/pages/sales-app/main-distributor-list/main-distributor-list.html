@@ -1,9 +1,9 @@
 <ion-header>
     <ion-navbar>
-        <ion-title *ngIf="DrType==1 && target_Type=='My'">Channel Partner</ion-title>
+        <ion-title *ngIf="DrType==1 && target_Type=='My'">Distributor</ion-title>
         <ion-title *ngIf="DrType==7 && target_Type!='My'">Team Dealers</ion-title>
         <ion-title *ngIf="DrType==7 && target_Type=='My'">Direct Dealers</ion-title>
-        <ion-title *ngIf="DrType==1 &&target_Type!='My'">Team Channel Partner</ion-title>
+        <ion-title *ngIf="DrType==1 &&target_Type!='My'">Team Distributor</ion-title>
 
         <ion-buttons end>
             <button ion-button icon-only *ngIf="teamCount > 0" (click)="search.name='';presentPopover($event)">

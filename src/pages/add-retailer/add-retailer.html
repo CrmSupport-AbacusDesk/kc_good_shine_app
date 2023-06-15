@@ -75,7 +75,7 @@
 
         <div *ngIf="!form.id">
           <ion-item [ngClass]="{'error':f.submitted &&assign_dr_id?.invalid}">
-            <ion-label floating>Select Channel Partner <strong class="red-text">*</strong></ion-label>
+            <ion-label floating>Select Distributor <strong class="red-text">*</strong></ion-label>
             <ion-select name="assign_dr_id" name="assign_dr_id" #assign_dr_id="ngModel" [(ngModel)]="form.assign_dr_id"
               required>
               <ion-option *ngFor="let row of distributor_list;let i=index;" value="{{row.id}}" required>

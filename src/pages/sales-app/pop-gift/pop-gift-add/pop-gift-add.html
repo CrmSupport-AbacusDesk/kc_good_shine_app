@@ -12,14 +12,14 @@
                     <ion-label floating>Select Type</ion-label>
                     <ion-select name="networkType" [(ngModel)]="pop_data.networkType"
                     (ngModelChange)="get_network_list(pop_data.networkType)" required>
-                    <ion-option value="1">Channel Partner</ion-option>
+                    <ion-option value="1">Distributor</ion-option>
                     <ion-option value="7">Direct Dealer</ion-option>
                     <ion-option value="3">Dealer</ion-option>
                 </ion-select>
             </ion-item>
             <ion-item  *ngIf="pop_data.networkType">
                 <ion-label floating>
-                    <ng-container *ngIf="pop_data.networkType == '1'">Channel Partner</ng-container>
+                    <ng-container *ngIf="pop_data.networkType == '1'">Distributor</ng-container>
                     <ng-container *ngIf="pop_data.networkType == '7'">Direct Dealer</ng-container>
                     <ng-container *ngIf="pop_data.networkType == '3'">Dealer</ng-container>
                 </ion-label>

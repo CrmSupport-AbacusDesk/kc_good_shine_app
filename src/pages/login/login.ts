@@ -36,8 +36,8 @@ export class LoginPage {
     constructor(public navCtrl: NavController, public appVersion: AppVersion, public navParams: NavParams, public service: LoginserviceProvider, public FormBuilder: FormBuilder, public LoadingCtrl: LoadingController, public toastCtrl: ToastController, public alertCtrl: AlertController, public platform: Platform, public db: MyserviceProvider, public loadingCtrl: LoadingController,public serv: LoginserviceProvider, public constant:ConstantProvider,public myservice :MyserviceProvider,private device: Device, ) {
         this.getVersion();
         this.register_type = this.navParams.get('registerType1');
-        // this.registerType = this.navParams.get('registerType');
-        this.registerType = 'Other';
+        this.registerType = this.navParams.get('registerType');
+        // this.registerType = 'Other';
 
         this.spinner = false
         this.validations_form = FormBuilder.group({

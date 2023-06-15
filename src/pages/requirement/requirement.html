@@ -13,7 +13,7 @@
   <ion-item class="cs-normal-select mt15 mb0" >
     <ion-label><span>Lead Type</span></ion-label>
     <ion-select name="lead_type" #lead_type="ngModel" [(ngModel)]="form.lead_type" (ngModelChange)="get_assign_dr(form.lead_type)">
-        <ion-option value="1">Channel Partner</ion-option>
+        <ion-option value="1">Distributor</ion-option>
         <ion-option value="7">Direct Dealer</ion-option>
         <!-- <ion-option value="3">Retailer</ion-option> -->
         <ion-option value="5">End User</ion-option>
@@ -24,7 +24,7 @@
 </ion-item>
 
 <ion-item class="cs-select mt15 mb0"  *ngIf="form.lead_type == '3' || form.lead_type == '1' || form.lead_type == '5' || form.lead_type == '9' || form.lead_type == '10' || form.lead_type == '11' || form.lead_type == '6' || form.lead_type == '7'">
-  <ion-label *ngIf="form.lead_type == '1'"><span>Select Channel Partner</span></ion-label>
+  <ion-label *ngIf="form.lead_type == '1'"><span>Select Distributor</span></ion-label>
   <ion-label *ngIf="form.lead_type == '7'"><span>Direct Dealer</span></ion-label>
   <!-- <ion-label *ngIf="form.lead_type == '3'"><span>Select Retailer</span></ion-label> -->
   <ion-label *ngIf="form.lead_type == '5'"><span>Select End User</span></ion-label>
