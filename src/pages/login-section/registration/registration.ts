@@ -527,6 +527,15 @@ export class RegistrationPage {
 
   }
 
+  AssignSalesEmp(district){
+    this.myservice.addData({'state_name':this.data.state, 'district':district}, 'Influencer/saleExecutiveList').then(result => {
 
+      console.log(result);
+      
+     
+    });
+  
+  }
 
 }
+
