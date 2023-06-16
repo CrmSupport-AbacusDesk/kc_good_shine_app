@@ -221,14 +221,19 @@
 
         </div>
 
+        
+
         <ion-list *ngIf="add_list.length">
             <ion-item class="cs-textarea1 ">
                 <ion-label floating><span>Any Remarks</span></ion-label>
                 <ion-textarea name="remark" [(ngModel)]="data.remark"></ion-textarea>
             </ion-item>
         </ion-list>
-        <div class="mt16 mb16" *ngIf="add_list.length > 0 && data.type_name">
-            <button ion-button [disabled]="btndisable" class="Buttons" (click)="save_orderalert('submit')">Save</button>
+
+        <div class="flex-btn" *ngIf="add_list.length > 0 && data.type_name">
+            <button ion-button [disabled]="btndisable" class="cs-btn" (click)="save_orderalert('submit')">Save</button>
         </div>
     </div>
 </ion-content>
+
+ 

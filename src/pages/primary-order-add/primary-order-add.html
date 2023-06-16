@@ -287,7 +287,8 @@
                     <ion-spinner *ngIf="btnDisableDraft"></ion-spinner>
                     Draft
                 </button> -->
-                <button ion-button [disabled]="btndisable" class="Buttons"
+                <!-- class="Buttons" -->
+                <button ion-button [disabled]="btndisable" class="cs-btn"
                     (click)="user_data.order_status='Pending';save_orderalert('save');">
                     <ion-spinner *ngIf="btnDisableSave"></ion-spinner>
                     Save
