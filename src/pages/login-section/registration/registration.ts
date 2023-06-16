@@ -68,7 +68,6 @@ export class RegistrationPage {
     this.data['device_info'] = this.device.model + ',' + this.device.platform + ',' + this.device.version + ',' + this.device.manufacturer;
     this.uploadurl = constant.influencer_doc;
     this.getInfluencer();
-    // this.AssignSalesEmp();
     this.getUser();
     this.data.document_image = '';
     this.data.pan_img = '';
@@ -528,12 +527,15 @@ export class RegistrationPage {
 
   }
 
-  // AssignSalesEmp(){
-  //   this.service.get_rqst({}, 'test/Executive').subscribe(result => {
+  AssignSalesEmp(district){
+    this.myservice.addData({'state_name':this.data.state, 'district':district}, 'Influencer/saleExecutiveList').then(result => {
+
+      console.log(result);
+      
      
-  //   });
+    });
   
-  // }
+  }
 
 }
 

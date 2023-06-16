@@ -115,7 +115,7 @@
 
                         <ion-item [ngClass]="{'error':f.submitted && district?.invalid}">
                             <ion-label floating>District<span>*</span></ion-label>
-                            <ion-select name="district" #district="ngModel" [(ngModel)]="data.district" required>
+                            <ion-select name="district" #district="ngModel" [(ngModel)]="data.district" (ngModelChange)="AssignSalesEmp(data.district)" required>
                                 <ion-option *ngFor="let row of district_list"
                                     value="{{row.district_name}}">{{row.district_name}}</ion-option>
                             </ion-select>
@@ -142,12 +142,12 @@
                             minlength="5"></ion-input>
                     </ion-item>
 
-                    <ion-item [ngClass]="{'error':f.submitted && sales_emp?.invalid}">
+                    <ion-item [ngClass]="{'error':f.submitted && sales_user_id?.invalid}">
                         <ion-label floating>Select Sales Employee <span>*</span></ion-label>
-                        <ion-select name="sales_emp" [(ngModel)]="data.sales_emp" #sales_emp="ngModel"
-                            (ngModelChange)="getDistrictList(data.sales_emp)" required>
+                        <ion-select name="sales_user_id" [(ngModel)]="data.sales_user_id" #sales_user_id="ngModel"
+                            (ngModelChange)="AssignSalesEmp(data.sales_user_id)" required>
                             <!-- <ion-option *ngFor="let row of state_list"
-                                value="{{row.sales_emp}}">{{row.sales_emp}}</ion-option> -->
+                                value="{{row.sales_user_id}}">{{row.sales_user_id}}</ion-option> -->
                         </ion-select>
                     </ion-item>
                     <!-- <div *ngIf="f.submitted && pincode.invalid" class="eror">
