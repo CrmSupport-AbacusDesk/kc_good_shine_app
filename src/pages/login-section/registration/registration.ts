@@ -44,6 +44,7 @@ export class RegistrationPage {
   appVersion:any
   doc: any = [];
   savingFlag: boolean = false;
+  sales_list:any =[];
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -528,8 +529,8 @@ export class RegistrationPage {
   }
 
   AssignSalesEmp(district){
-    this.myservice.addData({'state_name':this.data.state, 'district':district}, 'Influencer/saleExecutiveList').then(result => {
-
+    this.myservice.addData({'state':this.data.state, 'district':district}, 'Login/saleExecutiveList').then(result => {
+      this.sales_list = result['statusMsg'];
       console.log(result);
       
      

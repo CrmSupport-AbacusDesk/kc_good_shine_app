@@ -144,10 +144,9 @@
 
                     <ion-item [ngClass]="{'error':f.submitted && sales_user_id?.invalid}">
                         <ion-label floating>Select Sales Employee <span>*</span></ion-label>
-                        <ion-select name="sales_user_id" [(ngModel)]="data.sales_user_id" #sales_user_id="ngModel"
-                            (ngModelChange)="AssignSalesEmp(data.sales_user_id)" required>
-                            <!-- <ion-option *ngFor="let row of state_list"
-                                value="{{row.sales_user_id}}">{{row.sales_user_id}}</ion-option> -->
+                        <ion-select name="sales_user_id" [(ngModel)]="data.sales_user_id" #sales_user_id="ngModel" required>
+                             <ion-option *ngFor="let row of sales_list"
+                                value="{{row.id}}">{{row.name}}-{{row.contact_01}}</ion-option>
                         </ion-select>
                     </ion-item>
                     <!-- <div *ngIf="f.submitted && pincode.invalid" class="eror">
