@@ -42,19 +42,36 @@ export class ConstantProvider {
 
     //Test URL //
 
-    public rootUrl2: string ='https://kc-good-shine.basiq360.com/api/index.php/'
-    public rootUrl: string =  'https://kc-good-shine.basiq360.com/api/index.php/app/'
-    public rootUrl1: string =  'https://kc-good-shine.basiq360.com/'
-    public rootUrl3: string =  'https://kc-good-shine.basiq360.com/api/index.php/'
-    public rootUrlSfa: string =  'https://kc-good-shine.basiq360.com/api/index.php/app/'
+    public rootUrl2: string ='https://dev.basiq360.com/kcgoodshine/api/index.php/'
+    public rootUrl: string =  'https://dev.basiq360.com/kcgoodshine/api/index.php/app/'
+    public rootUrl1: string =  'https://dev.basiq360.com/kcgoodshine/'
+    public rootUrl3: string =  'https://dev.basiq360.com/kcgoodshine/api/index.php/'
+    public rootUrlSfa: string =  'https://dev.basiq360.com/kcgoodshine/api/index.php/app/'
     public server_url: string = this.rootUrl1 + 'index.php/app/';
     public upload_url: string = this.rootUrl1 + 'uploads/';
-    public upload_url1: string = 'https://kc-good-shine.basiq360.com/api/uploads/';
-    public upload_url2: string = 'https://kc-good-shine.basiq360.com/uploads/order-invoice/';
-    public img_url: string =  'https://kc-good-shine.basiq360.com/api/';
-    public loyaltyUrl: string =  'https://kc-good-shine.basiq360.com/api/';
-    public influencer_doc: string =  'https://kc-good-shine.basiq360.com/api/uploads/influencer_doc/';
-    public support_url : string ='https://kc-good-shine.basiq360.com/api/uploads/support/';
+    public upload_url1: string = 'https://dev.basiq360.com/kcgoodshine/api/uploads/';
+    public upload_url2: string = 'https://dev.basiq360.com/kcgoodshine/uploads/order-invoice/';
+    public img_url: string =  'https://dev.basiq360.com/kcgoodshine/api/';
+    public loyaltyUrl: string =  'https://dev.basiq360.com/kcgoodshine/api/';
+    public influencer_doc: string =  'https://dev.basiq360.com/kcgoodshine/api/uploads/influencer_doc/';
+    public support_url : string ='https://dev.basiq360.com/kcgoodshine/api/uploads/support/';
+
+
+    //Test URL //
+
+    // public rootUrl2: string ='https://kc-good-shine.basiq360.com/api/index.php/'
+    // public rootUrl: string =  'https://kc-good-shine.basiq360.com/api/index.php/app/'
+    // public rootUrl1: string =  'https://kc-good-shine.basiq360.com/'
+    // public rootUrl3: string =  'https://kc-good-shine.basiq360.com/api/index.php/'
+    // public rootUrlSfa: string =  'https://kc-good-shine.basiq360.com/api/index.php/app/'
+    // public server_url: string = this.rootUrl1 + 'index.php/app/';
+    // public upload_url: string = this.rootUrl1 + 'uploads/';
+    // public upload_url1: string = 'https://kc-good-shine.basiq360.com/api/uploads/';
+    // public upload_url2: string = 'https://kc-good-shine.basiq360.com/uploads/order-invoice/';
+    // public img_url: string =  'https://kc-good-shine.basiq360.com/api/';
+    // public loyaltyUrl: string =  'https://kc-good-shine.basiq360.com/api/';
+    // public influencer_doc: string =  'https://kc-good-shine.basiq360.com/api/uploads/influencer_doc/';
+    // public support_url : string ='https://kc-good-shine.basiq360.com/api/uploads/support/';
 
  
     //Live URL //
