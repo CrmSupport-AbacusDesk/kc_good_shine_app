@@ -346,11 +346,16 @@ export class DashboardPage {
         })
     }
     bannerDetail() {
-        this.service.addData({}, 'Influencer/banner_list').then((r) => {
-            this.service.dismiss();
-            this.appbanner = r['banner_list']
+        this.service.addData({}, 'AppInfluencer/bannerList').then((result) => {
+          if (result['statusCode'] == 200) {
+            this.appbanner = result['banner_list'];
+          }
+          else {
+            this.service.errorToast(result['statusMsg']);
+          }
         });
-    }
+      }
+    
 
 
     stop_attend() {
@@ -490,6 +495,7 @@ export class DashboardPage {
             if (result['statusCode'] == 200) {
                 this.skLoading = false
                 this.getNetworkType();
+                this.bannerDetail();
                 this.last_attendence_data = result['loginData']['attendence_data'];
                 this.today_count = result['loginData']['today_count'];
                 this.team_count = result['loginData']['team_count'];
