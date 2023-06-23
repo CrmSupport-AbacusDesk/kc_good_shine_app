@@ -121,6 +121,7 @@ export class DashboardPage {
         , public openNativeSettings: OpenNativeSettings
         , private barcodeScanner: BarcodeScanner) {
         // this.getNetworkType()
+        this.bannerURL = constant.upload_url1 + 'banner/';
 
     }
 

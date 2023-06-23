@@ -2,9 +2,7 @@
   "_args": [
     [
       "mx.ferreyra.callnumber@0.0.2",
-
       "D:\\abacusdesk_deepak\\kc_good_shine_app"
-
     ]
   ],
   "_from": "mx.ferreyra.callnumber@0.0.2",
@@ -28,10 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/mx.ferreyra.callnumber/-/mx.ferreyra.callnumber-0.0.2.tgz",
   "_spec": "0.0.2",
-
-  
   "_where": "D:\\abacusdesk_deepak\\kc_good_shine_app",
-
   "author": "",
   "bugs": {
     "url": "https://github.com/Rohfosho/CordovaCallNumberPlugin/issues"
