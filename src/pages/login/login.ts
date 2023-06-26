@@ -86,7 +86,7 @@ export class LoginPage {
                 return;
             }
             
-            if (this.form.phone == '5953356262' || this.form.phone == '8800132607' || this.form.phone == '8799730083') {
+            if (this.form.phone == '9319180958' || this.form.phone == '8800132607' || this.form.phone == '8799730083') {
                 this.form.otp = 123456;
             }
             else {
