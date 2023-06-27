@@ -413,7 +413,7 @@ export class MyApp {
                             {
                                 text: 'Update Now',
                                 handler: () => {
-                                    window.open('market://details?id=com.abacusdesk.pearls&hl=en', '_system', 'location=yes');
+                                    window.open('market://details?id=com.abacusdesk.kc_good_shine&hl=en', '_system', 'location=yes');
                                     // window.open('https://play.google.com/store/apps/details?id=com.abacusdesk.pearl&hl=en', '_system', 'location=yes');
                                     this.platform.exitApp();
                                 }

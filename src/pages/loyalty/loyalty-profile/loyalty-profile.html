@@ -25,8 +25,7 @@
             </div>
             <h2>{{karigar_detail.name |titlecase}}</h2>
             <h6>{{karigar_detail.influencer_type}}</h6>
-            <ng-container
-                *ngIf="karigar_detail.scanning_rights == 'Yes' || karigar_detail.point_transfer_right == 'Yes' ">
+            <ng-container *ngIf="karigar_detail.scanning_rights == 'Yes' || karigar_detail.point_transfer_right == 'Yes' ">
                 <p class="{{karigar_detail.status}}">
                     {{karigar_detail.status}}
                     <i class="material-icons Verified" *ngIf="karigar_detail.status =='Verified'">verified_user </i>
