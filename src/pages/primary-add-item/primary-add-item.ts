@@ -171,7 +171,7 @@ export class PrimaryAddItemPage {
             this.tcs_percent = parseFloat(this.order_data.tcs_percent);
             this.order_discount = parseFloat(this.order_data.order_discount)
             this.order_total = parseFloat(this.order_data.order_total);
-            this.total_qty = parseFloat(this.order_data.order_item);
+            this.total_qty = parseFloat(this.order_data.total_order_qty);
             this.total_gst_amount = this.total_gst_amount.toFixed()
             this.new_grand_total = this.new_grand_total.toFixed()
             this.total_gst_amount = parseFloat(this.total_gst_amount)

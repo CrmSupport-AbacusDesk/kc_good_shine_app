@@ -116,7 +116,7 @@ export class SecondaryAddItemPage {
     public platform: Platform,
     public db: MyserviceProvider,
     public appCtrl: App) {
-    this.data.gst_type = 'Gst Paid';
+    // this.data.gst_type = 'Gst Paid';
     this.drtype = this.navParams['data'].type;
     console.log(this.navParams);
     if (this.navParams.get('order_data') && this.navParams.get('order_item')) {
@@ -168,6 +168,7 @@ export class SecondaryAddItemPage {
     if (this.order_item && this.order_item.length > 0) {
       this.service.addData({ "Id": this.navParams.get('order_data')['id'] }, "AppOrder/secondaryOrderDetail").then((result) => {
         this.add_list = result['result']['item_details'];
+        this.data.gst_type = result['result']['gst_type'];
         this.order_id = this.navParams.get('order_data')['id']
         for (let i = 0; i < this.add_list.length; i++) {
           this.add_list[i].product_price = this.add_list[i]['price']
