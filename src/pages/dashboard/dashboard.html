@@ -154,7 +154,9 @@
                 <div class="shortcut-btns" style="grid-template-columns: 1fr 1fr 1fr;">
                     <ng-container *ngFor="let row of networkType">
                         <div class="btns-group" (click)="goToMainDistributorListPage(row.type)">
-                            <i class="material-icons ">storefront</i>
+                            <div class="tileIcon">
+                                <i class="material-icons ">storefront</i>
+                            </div>
                             <span>{{row.module_name}}</span>
                         </div>
                     </ng-container>
@@ -177,38 +179,56 @@
             <div class="shorcuts">
                 <h1>Shortcuts</h1>
                 <div class="shortcut-btns">
-                    <div class="btns-group" (click)="goToDashboard()">
+                    <!-- <div class="btns-group" (click)="goToDashboard()">
                         <i class="material-icons" >dashboard</i>
                         <span>Dashboard</span>
-                    </div>
+                    </div> -->
+                    <div class="btns-group" (click)="goToDashboard()">
+                        <div class="tileIcon">
+                            <i class="material-icons ">dashboard</i>
+                        </div>
+                        <span>Dashboard</span>
+                    </div>
 
                     <div class="btns-group" (click)="goToPrimaryOrders()"
                         *ngIf="user_data.order_type.toLowerCase() == 'primary' || user_data.order_type.toLowerCase() == 'both' ">
-                        <i class="material-icons ">shopping_cart</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">shopping_cart</i>
+                        </div>
                         <span>Primary Order</span>
                     </div>
                     <div class="btns-group" (click)="goToSecondaryOrders()"
                         *ngIf="user_data.order_type.toLowerCase() == 'secondary' || user_data.order_type.toLowerCase() == 'both' ">
-                        <i class="material-icons ">shopping_cart</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">shopping_cart</i>
+                        </div>
                         <span>Secondary Order</span>
                     </div>
                     <div class="btns-group" (click)="goToAttendence()">
-                        <i class="material-icons ">insert_invitation</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">insert_invitation</i>
+                        </div>
                         <span>Attendance</span>
                     </div>
                     <div class="btns-group" (click)="goToFollowup()">
-                        <i class="material-icons ">add_ic_call</i>
+                        <div class="tileIcon">
+                            <i class="material-icons">add_ic_call</i>
+                        </div>
                         <span>Follow Up</span>
                     </div>
 
                     <div class="btns-group" (click)="goToCheckin()">
-                        <i class="material-icons ">my_location</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">my_location</i>
+                        </div>
                         <span>Check In</span>
                     </div>
 
                     <div class="btns-group" (click)="goToLead()">
                         <div class="rel">
-                            <i class="material-icons ">people_alt</i>
+                            <div class="tileIcon">
+                                <i class="material-icons ">people_alt</i>
+                            </div>
                             <ng-container *ngIf="enquiry_count > 0">
                                 <span [ngClass]="{'new-dot': enquiry_count > 0}">{{enquiry_count}}</span>
                             </ng-container>
@@ -217,32 +237,46 @@
                     </div>
 
                     <div class="btns-group" (click)="goToevent()">
-                        <i class="material-icons ">groups</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">groups</i>
+                        </div>
                         <span>Event Plan</span>
                     </div>
                     <div class="btns-group" (click)="viewAchievement()">
-                        <i class="material-icons ">show_chart</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">show_chart</i>
+                        </div>
                         <span>Target</span>
                     </div>
                     <div class="btns-group" (click)="goTopop()">
-                        <i class="material-icons ">card_giftcard</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">card_giftcard</i>
+                        </div>
                         <span>Pop & Gift</span>
                     </div>
                     <div class="btns-group" (click)="goToTravel('My')">
-                        <i class="material-icons ">directions_transit</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">directions_transit</i>
+                        </div>
                         <span>Travel Plan</span>
                     </div>
                     <div class="btns-group" (click)="goToExpense('My')">
-                        <i class="material-icons ">account_balance_wallet</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">account_balance_wallet</i>
+                        </div>
                         <span>Expense</span>
                     </div>
                     <div class="btns-group" (click)="goToLeave('My')">
-                        <i class="material-icons ">exit_to_app</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">exit_to_app</i>
+                        </div>
                         <span>Leave</span>
                     </div>
                     <div class="btns-group" (click)="goToTask()">
                         <div class="rel">
-                            <i class="material-icons">task</i>
+                            <div class="tileIcon">
+                                <i class="material-icons">task</i>
+                            </div>
                             <ng-container *ngIf="unreadTaskCount > 0">
                                 <span [ngClass]="{'new-dot': unreadTaskCount > 0}">{{unreadTaskCount}}</span>
                             </ng-container>
@@ -251,7 +285,9 @@
                         <span>Task</span>
                     </div>
                     <div class="btns-group" (click)="goToSurvey()">
-                        <i class="material-icons">poll</i>
+                        <div class="tileIcon">
+                            <i class="material-icons">poll</i>
+                        </div>
                         <span>Survey</span>
                     </div>
                     <!-- <div class="btns-group" (click)="scanProduct()">
@@ -259,11 +295,15 @@
                         <span>Product Scan</span>
                     </div> -->
                     <div class="btns-group" (click)="goOnProductPage()">
-                        <i class="material-icons ">category</i>
+                        <div class="tileIcon">
+                            <i class="material-icons ">category</i>
+                        </div>
                         <span>Products</span>
                     </div>
                     <div class="btns-group" (click)="goOnDigitalcatPage();">
-                        <i class="material-icons">picture_as_pdf</i>
+                        <div class="tileIcon">
+                            <i class="material-icons">picture_as_pdf</i>
+                        </div>
                         <span>E-Catalogue</span>
                     </div>
 
@@ -274,7 +314,9 @@
 
                     <div class="btns-group" (click)="announcementList()">
                         <div class="rel">
-                            <i class="material-icons">campaign</i>
+                            <div class="tileIcon">
+                                <i class="material-icons">campaign</i>
+                            </div>
                             <ng-container *ngIf="announcementCount > 0">
                                 <span [ngClass]="{'new-dot': announcementCount > 0}">{{announcementCount}}</span>
                             </ng-container>
@@ -282,7 +324,9 @@
                         <span>Announcement</span>
                     </div>
                     <div class="btns-group" (click)="gotoHolidayList();">
-                        <i class="material-icons">calendar_month</i>
+                        <div class="tileIcon">
+                            <i class="material-icons">calendar_month</i>
+                        </div>
                         <span>Holidays</span>
                     </div>
 
