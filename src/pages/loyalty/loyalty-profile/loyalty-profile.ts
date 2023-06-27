@@ -199,7 +199,7 @@ export class LoyaltyProfilePage {
     if (this.karigar_detail.referral_code != "") {
       this.ref_code = ' and use my Code *' + this.karigar_detail.referral_code + '* to get points back in your wallet'
     }
-    this.socialSharing.share('Hey There ! here is an awesome app from Pearl Precision   ..Give it a try https://play.google.com/store/apps/details?id=com.abacusdesk.pearl ' + this.ref_code).then(() => {
+    this.socialSharing.share('Hey There ! here is an awesome app from Kc good shine   ..Give it a try https://play.google.com/store/apps/details?id=com.abacusdesk.kc_good_shine ' + this.ref_code).then(() => {
     }).catch((e) => {
       this.service.errorToast('Something Went wrong , Please Try Again Later')
     });
