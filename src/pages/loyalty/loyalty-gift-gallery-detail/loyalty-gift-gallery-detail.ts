@@ -100,6 +100,12 @@ export class LoyaltyGiftGalleryDetailPage {
 
   SendRequest() {
 
+    if(this.influencer_point.redemption == 0){
+      this.service.errorToast('currently redemption not active');
+      return
+
+    }
+
     if (this.gift_detail.gift_type == 'Cash') {
       if (this.data.cash_point == undefined) {
         this.service.errorToast('Please enter redeem points value');
