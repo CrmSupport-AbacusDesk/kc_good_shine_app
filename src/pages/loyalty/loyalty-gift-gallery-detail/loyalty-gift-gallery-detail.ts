@@ -32,7 +32,7 @@ export class LoyaltyGiftGalleryDetailPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public service: MyserviceProvider, public loadingCtrl: LoadingController, private app: App, public storage: Storage, public db: DbserviceProvider, public constant: ConstantProvider, public toastCtrl: ToastController) {
-  //  this.data.payment_mode = 'Bank';
+   this.data.payment_mode = 'Bank';
     this.gift_id = this.navParams.get('id');
     this.uploadUrl = constant.upload_url1 + 'gift_gallery/';
     this.service.presentLoading();

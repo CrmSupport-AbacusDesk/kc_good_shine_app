@@ -201,7 +201,7 @@ export class RegistrationPage {
   }
 
   getDistrictList(state_name) {
-    this.service.post_rqst({ 'state_name': state_name }, 'AppInfluencerSignup/getDistrict').subscribe(result => {
+    this.myservice.addData({ 'state_name': state_name }, 'AppInfluencerSignup/getDistrict').then(result => {
       if (result['statusCode'] == 200) {
         this.district_list = result['all_district'];
       }

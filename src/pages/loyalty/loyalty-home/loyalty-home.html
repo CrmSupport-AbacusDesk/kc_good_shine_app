@@ -82,10 +82,13 @@
                <p>{{'Scan'}}</p>
             </div>
                
-            <!-- <div class="outline-btn" (click)="goToCoupon()" *ngIf="pointRight.scanning_rights == 'Yes'">
-                <div class="icons"><i class="material-icons">qr_code</i></div>
-                {{'Enter Code'}}
-            </div> -->
+            <div class="outline-btn" (click)="goToCoupon()" *ngIf="pointRight.scanning_rights == 'Yes'">
+                <!-- <div class="icons"><i class="material-icons">qr_code</i></div> -->
+                <div class="img-view">
+                    <img src="assets/imgs/home-icon/scane.svg">
+                </div>
+               <p>{{'Enter Code'}}</p>
+            </div>
             <div class="outline-btn" (click)="goOnProductPage()">
                 <!-- <i class="material-icons ">category</i> -->
                 <div class="img-view">
