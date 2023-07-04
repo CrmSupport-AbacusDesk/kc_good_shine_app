@@ -62,7 +62,7 @@
           </div>
         </ng-container>
 
-        <!-- <ng-container *ngIf="gift_detail.gift_type == 'Cash' && data.payment_mode=='Bank'">
+        <ng-container *ngIf="gift_detail.gift_type == 'Cash' && data.payment_mode=='Bank'">
           <div class="profile-card mt16">
             <div class="text-center">
               <h2>{{ 'Bank Information' }}</h2>
@@ -86,7 +86,7 @@
           </div>
         </ng-container>
 
-        <ng-container *ngIf="data.payment_mode!='Bank'">
+        <!-- <ng-container *ngIf="data.payment_mode!='Bank'">
           <div class="profile-card mt16">
             <div class="text-box">
               <p>{{karigar_detail.country=='india'? 'Paytm Wallet No.':'Khalti Wallet No.'}}</p>
