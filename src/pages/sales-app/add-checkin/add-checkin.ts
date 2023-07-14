@@ -176,14 +176,14 @@ export class AddCheckinPage {
       } else {
         String = this.string.value
       }
-      if (this.newData.type == 3) {
-        this.showAdd = true
+      if (this.newData.distribution_type == 'Dr') {
+      this.showAdd = true
       } else {
         this.showAdd = false
       }
       this.service.addData({ 'dr_type': Number(this.data.type), 'type_name': this.newData.distribution_type, 'checkin_type': 'checkin', 'filter': this.string }, 'AppCheckin/getNetworkList').then((result) => {
         this.distributor_network_list = result['result'];
-        this.object_data.display_name = 'Add New Retailer'
+        this.object_data.display_name = 'Add New '
         this.object_data.new_counter = 'TRUE'
         for (let i = 0; i < this.distributor_network_list.length; i++) {
           // this.distributor_network_list[i] =  this.object_data
@@ -205,14 +205,16 @@ export class AddCheckinPage {
 
   save_retailer() {
     this.savingFlag = true
+    if(this.form.type_id=='3'){
     if (!this.form.id) {
       if (!this.form.assign_dr_id) {
         this.service.errorToast('Please Select Distributor!')
+        this.form.assign_dr_id = this.form.assign_dr_id.id
       }
     }
-    this.form.assign_dr_id = this.form.assign_dr_id.id
+    }
     this.form.display_name = this.form.company_name + "-" + this.form.name + "-" + this.form.mobile
-    this.form.type_id = 3;
+    this.form.type_id = this.newData.type;
     this.service.addData({ "data": this.form }, "AppCheckin/addDealer")
       .then(resp => {
         if (resp['statusCode'] == 200) {

@@ -59,10 +59,12 @@ export class AddRetailerPage {
         this.serve.dismiss();
       })
   }
+  
   get_distributor() {
     this.serve.addData({ 'dr_type': 1, 'type_name': "Distributor", "checkin_type": "checkin" }, 'AppCheckin/getNetworkList').then((resp) => {
       if (resp['statusCode'] == 200) {
         this.distributor_list = resp['result'];
+
       } else {
         this.serve.errorToast(resp['statusMsg']);
 

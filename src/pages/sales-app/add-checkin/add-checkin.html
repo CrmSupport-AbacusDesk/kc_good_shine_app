@@ -25,8 +25,7 @@
 					<ionic-selectable item-content [(ngModel)]="data.type_name" [items]="distributor_network_list"
 						itemValueField="id" itemTextField="display_name"
 						(onChange)="other(data.type_name.company_name,data.type_name)" [canSearch]="true"
-						[canAddItem]="showAdd" addButtonText="Add New Dealer" (onAddItem)="onAddPort($event)"
-						#selectComponent>
+						[canAddItem]="showAdd" addButtonText="Add New" (onAddItem)="onAddPort($event)" #selectComponent>
 					</ionic-selectable>
 				</ion-item>
 			</ion-list>
@@ -89,6 +88,15 @@
 					<div *ngIf="f.submitted &&mobile.invalid" class="eror">
 						<!-- <p *ngIf="mobile.errors.required">{{'Field is Required'}}</p> -->
 					</div>
+
+					<ion-item  *ngIf="this.newData.type =='3' ||this.newData.type =='7' || this.newData.type =='1'">
+						<ion-label floating>GST<span>*</span></ion-label>
+						<ion-input type="text" name="gst" [(ngModel)]="form.gst" minLength="16" maxLength="16"
+							onkeypress='return ((event.charCode >= 48 && event.charCode <= 57) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 65 && event.charCode <= 90))'
+							required>
+						</ion-input>
+					</ion-item>
+					
 					<ion-item>
 						<ion-label floating>Email Id</ion-label>
 						<ion-input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email"
@@ -101,7 +109,7 @@
 					</ion-item>
 
 
-					<div *ngIf="!form.id">
+					<div *ngIf="!form.id && this.newData.type =='3'">
 						<ion-item [ngClass]="{'error':f.submitted &&assign_dr_id?.invalid}">
 							<ion-label floating>Select Distributor<span>*</span></ion-label>
 							<ionic-selectable item-content name="assign_dr_id" #assign_dr_id="ngModel"
@@ -185,7 +193,8 @@
 					<ion-list no-lines>
 						<ion-item [ngClass]="{'error': (f.submitted && display_name?.invalid)}">
 							<ion-label floating>Name <span>*</span></ion-label>
-							<ion-input type="text" name="display_name" #display_name="ngModel" [(ngModel)]="form.display_name" required>
+							<ion-input type="text" name="display_name" #display_name="ngModel"
+								[(ngModel)]="form.display_name" required>
 							</ion-input>
 						</ion-item>
 						<div *ngIf="f.submitted && display_name.invalid" class="eror">
@@ -196,8 +205,8 @@
 						<ion-item [ngClass]="{'error': (f.submitted && mobile?.invalid)}">
 							<ion-label floating>Mobile Number<span>*</span></ion-label>
 							<ion-input type="text" name="mobile" #mobile="ngModel"
-								onkeypress="return event.charCode>=48 && event.charCode<=57" minlength="10" maxlength="10"
-								[(ngModel)]="form.mobile" required>
+								onkeypress="return event.charCode>=48 && event.charCode<=57" minlength="10"
+								maxlength="10" [(ngModel)]="form.mobile" required>
 								<ion-icon name="cancel"></ion-icon>
 							</ion-input>
 						</ion-item>
@@ -207,11 +216,11 @@
 					</ion-list>
 				</div>
 				<button ion-button block color="primary" [disabled]="spinnerLoader">
-				<ion-spinner *ngIf="spinnerLoader"></ion-spinner>&nbsp;Check In </button>
+					<ion-spinner *ngIf="spinnerLoader"></ion-spinner>&nbsp;Check In </button>
 			</form>
 		</ng-container>
-		<button ion-button block color="primary" [disabled]="!data.network || spinnerLoader" *ngIf="load == '1' && dr_name.trim().toLowerCase()!='other'"
-			(click)="startVisit('blank')">
+		<button ion-button block color="primary" [disabled]="!data.network || spinnerLoader"
+			*ngIf="load == '1' && dr_name.trim().toLowerCase()!='other'" (click)="startVisit('blank')">
 			<ion-spinner *ngIf="spinnerLoader"></ion-spinner>&nbsp;Check In
 		</button>
 	</div>
