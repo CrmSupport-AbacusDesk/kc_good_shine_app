@@ -163,19 +163,20 @@
                 </div>
             </div>
 
-            <!-- <div class="shorcuts mb16">
+            <div class="shorcuts mb16">
             <h1>Influencer Network</h1>
-            <div class="shortcut-btns" style="grid-template-columns: 1fr 1fr 1fr;" >
+            <div class="shortcut-btns" style="grid-template-columns: 1fr 1fr;" >
                 <ng-container *ngFor="let row of influencerUser">
-                    <div class="btns-group"
-                        (click)="goSiteListPage(row.module_name, row.scanning_rights, row.point_transfer_right, row.type)">
+                    <div class="btns-group" (click)="goSiteListPage(row.module_name, row.scanning_rights, row.point_transfer_right, row.type)">
+                        <div class="tileIcon">
                         <i class="material-icons ">{{row.scanning_rights == 'Yes' ? 'engineering' : (row.scanning_rights
                             == 'No' && row.point_transfer_right == "Yes") ? 'person' : 'apartment'}}</i>
+                        </div>   
                         <span>{{row.module_name}}</span>
                     </div>
                 </ng-container>
             </div>
-        </div> -->
+           </div>
             <div class="shorcuts">
                 <h1>Shortcuts</h1>
                 <div class="shortcut-btns">

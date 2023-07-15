@@ -496,6 +496,7 @@ export class DashboardPage {
             if (result['statusCode'] == 200) {
                 this.skLoading = false
                 this.getNetworkType();
+                this.getInfluencer();
                 this.bannerDetail();
                 this.last_attendence_data = result['loginData']['attendence_data'];
                 this.today_count = result['loginData']['today_count'];
